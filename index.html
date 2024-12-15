@@ -3,22 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Penpot plugin example</title>
+    <title>Import palette</title>
   </head>
   <body>
-    <p>Penpot plugin starter template</p>
+    <div class="theme-group">
+      <div class="form-group" style="padding-block-end: var(--spacing-12)">
+        <label class="input-label-hidden" for="palette-url"
+          >Enter the palette URL</label
+        >
+        <input
+          id="palette-url"
+          class="input"
+          type="text"
+          placeholder="Enter the palette URL"
+          style="width: 100%"
+        />
+      </div>
+    </div>
 
-    <p>
-      Checkout the
-      <a target="_blank" href="https://help.penpot.app/plugins/"
-        >documentation</a
-      >
-      to get started.
-    </p>
-
-    <button type="button" data-appearance="primary" data-handler="create-text">
-      Create text
+    <button
+      type="button"
+      data-appearance="primary"
+      data-handler="create-text"
+      style="width: 100%"
+      id="import-palette"
+    >
+      Import palette
     </button>
+
+    <div style="position: fixed; bottom: 0; left: 0; right: 0">
+      <div id="palette-preview" style="display: none; flex-direction: column">
+        <p
+          id="palette-message"
+          class="caption"
+          style="
+            color: var(--foreground-secondary);
+            padding-right: var(--spacing-8);
+          "
+        ></p>
+        <div
+          id="palette-colors"
+          style="
+            display: flex;
+            justify-content: center;
+            border-radius: 4px;
+            overflow: hidden;
+          "
+        ></div>
+      </div>
+    </div>
 
     <script type="module" src="/src/main.ts"></script>
   </body>
