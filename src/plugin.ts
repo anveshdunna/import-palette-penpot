@@ -1,7 +1,7 @@
 // Size the iframe
 penpot.ui.open("IMPORT PALETTE PLUGIN", `?theme=${penpot.theme}`, {
   width: 280,
-  height: 200,
+  height: 240,
 });
 
 penpot.ui.onMessage<{
