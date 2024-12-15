@@ -1,6 +1,7 @@
 {
   "name": "Import palette",
   "code": "plugin.js",
+  "icon": "/icon.png",
   "description": "Create color styles from Lospec palette URL",
-  "permissions": ["library:write"]
+  "permissions": ["content:read", "content:write", "library:write"]
 }
